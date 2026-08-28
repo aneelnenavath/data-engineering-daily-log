@@ -1,0 +1,11 @@
+Loaded messy_customers.csv: 15 rows, 6 columns
+Stripped leading/trailing whitespace in 'city' (1 cell(s))
+Title-cased 'city' so 'LONDON'/'london'/'London' collapse to one value (7 cell(s))
+Lowercased 'plan_type' for consistent casing (2 cell(s))
+Dropped 2 row(s) missing a required field ['customer_id', 'name', 'email'] (customer_id(s): 1005, 1012)
+Row count after required-field check: 13 (was 15)
+Filled 1 missing value(s) in 'signup_date' with 'unknown'
+Filled 1 missing value(s) in 'plan_type' with 'unknown'
+Removed 3 duplicate row(s) (customer_id(s): 1004, 1009, 1015)
+Row count after de-duplication: 10 (was 13)
+Wrote cleaned data to cleaned_customers.csv: 10 rows

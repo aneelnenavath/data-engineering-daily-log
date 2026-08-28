@@ -1,0 +1,16 @@
+customer_id,name,email,city,signup_date,plan_type
+1001,Alice Turner,alice.turner@example.com,London,2026-01-15,premium
+1002,Bob Singh,bob.singh@example.com,manchester,2026-01-16,basic
+1003,Carla Diaz,carla.diaz@example.com,LONDON,2026-01-17,
+1004,Bob Singh,bob.singh@example.com,manchester,2026-01-16,basic
+1005,Dan O'Neill,,Bristol,2026-01-18,premium
+1006,Eva Novak,eva.novak@example.com, Manchester ,2026-01-19,basic
+1007,Frank Lee,frank.lee@example.com,Edinburgh,2026-01-20,PREMIUM
+1008,Grace Kim,grace.kim@example.com,london,2026-01-21,basic
+1009,Alice Turner,alice.turner@example.com,London,2026-01-15,premium
+1010,Henry Ford,henry.ford@example.com,bristol,,basic
+1011,Ivy Chen,ivy.chen@example.com,Manchester,2026-01-23,Basic
+1012,Jack Ryan,,,,
+1013,Karen Wu,karen.wu@example.com,Glasgow,2026-01-24,premium
+1014,Liam Ross,liam.ross@example.com,EDINBURGH,2026-01-25,basic
+1015,Karen Wu,karen.wu@example.com,glasgow,2026-01-24,premium
