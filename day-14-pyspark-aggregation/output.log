@@ -1,0 +1,45 @@
+Missing Python executable 'python3', defaulting to 'C:\Users\ANIL RATHOD\anaconda3\Lib\site-packages\pyspark\bin\..' for SPARK_HOME environment variable. Please install Python or specify the correct Python executable in PYSPARK_DRIVER_PYTHON or PYSPARK_PYTHON environment variable to detect SPARK_HOME safely.
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 15:>                                                         (0 + 1) / 1]                                                                                === Raw schema ===
+root
+ |-- order_id: integer (nullable = true)
+ |-- customer_id: integer (nullable = true)
+ |-- product_name: string (nullable = true)
+ |-- amount: double (nullable = true)
+ |-- order_date: date (nullable = true)
+
+Total rows read: 313
+
+=== Revenue by product ===
++------------+-------------+----------+---------------+
+|product_name|total_revenue|num_orders|avg_order_value|
++------------+-------------+----------+---------------+
+|      Laptop|     66587.01|        58|        1148.05|
+|     Monitor|     18361.99|        55|         333.85|
+|  Desk Chair|      8204.44|        40|         205.11|
+|  Headphones|      4609.59|        46|         100.21|
+|    Keyboard|      3725.06|        56|          66.52|
+|       Mouse|      2230.93|        58|          38.46|
++------------+-------------+----------+---------------+
+
+Written to product_revenue_parquet/
+
+=== Re-reading the Parquet output to prove it's genuinely on disk ===
++------------+-------------+----------+---------------+
+|product_name|total_revenue|num_orders|avg_order_value|
++------------+-------------+----------+---------------+
+|      Laptop|     66587.01|        58|        1148.05|
+|     Monitor|     18361.99|        55|         333.85|
+|  Desk Chair|      8204.44|        40|         205.11|
+|  Headphones|      4609.59|        46|         100.21|
+|    Keyboard|      3725.06|        56|          66.52|
+|       Mouse|      2230.93|        58|          38.46|
++------------+-------------+----------+---------------+
+
+SUCCESS: The process with PID 34852 (child process of PID 28324) has been terminated.
+SUCCESS: The process with PID 28324 (child process of PID 31360) has been terminated.
+SUCCESS: The process with PID 31360 (child process of PID 21784) has been terminated.
+^C
