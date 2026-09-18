@@ -1,0 +1,52 @@
+Missing Python executable 'python3', defaulting to 'C:\Users\ANIL RATHOD\anaconda3\Lib\site-packages\pyspark\bin\..' for SPARK_HOME environment variable. Please install Python or specify the correct Python executable in PYSPARK_DRIVER_PYTHON or PYSPARK_PYTHON environment variable to detect SPARK_HOME safely.
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 28:>                 (0 + 1) / 1][Stage 29:>                 (0 + 1) / 1][Stage 29:>                                                         (0 + 1) / 1]                                                                                orders: 50000 rows, customers: 10 rows
+
+=== No hint (auto-broadcast disabled -> forces a shuffle/sort-merge join) ===
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- Project [customer_id#18, order_id#17, amount#19, customer_name#38, region#39]
+   +- SortMergeJoin [customer_id#18], [customer_id#37], Inner
+      :- Sort [customer_id#18 ASC NULLS FIRST], false, 0
+      :  +- Exchange hashpartitioning(customer_id#18, 200), ENSURE_REQUIREMENTS, [plan_id=127]
+      :     +- Filter isnotnull(customer_id#18)
+      :        +- FileScan csv [order_id#17,customer_id#18,amount#19] Batched: false, DataFilters: [isnotnull(customer_id#18)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/C:/Users/ANIL RATHOD/data-engineering-daily-log/day-15-join-benc..., PartitionFilters: [], PushedFilters: [IsNotNull(customer_id)], ReadSchema: struct<order_id:int,customer_id:int,amount:double>
+      +- Sort [customer_id#37 ASC NULLS FIRST], false, 0
+         +- Exchange hashpartitioning(customer_id#37, 200), ENSURE_REQUIREMENTS, [plan_id=128]
+            +- Filter isnotnull(customer_id#37)
+               +- FileScan csv [customer_id#37,customer_name#38,region#39] Batched: false, DataFilters: [isnotnull(customer_id#37)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/C:/Users/ANIL RATHOD/data-engineering-daily-log/day-15-join-benc..., PartitionFilters: [], PushedFilters: [IsNotNull(customer_id)], ReadSchema: struct<customer_id:int,customer_name:string,region:string>
+
+
+  No-hint join trial 1: 0.992s (result rows: 50000)
+  No-hint join trial 2: 0.514s (result rows: 50000)
+  No-hint join trial 3: 2.044s (result rows: 50000)
+  No-hint join average: 1.183s
+
+=== Broadcast hint (small customers table explicitly broadcast) ===
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- Project [customer_id#18, order_id#17, amount#19, customer_name#38, region#39]
+   +- BroadcastHashJoin [customer_id#18], [customer_id#37], Inner, BuildRight, false, false
+      :- Filter isnotnull(customer_id#18)
+      :  +- FileScan csv [order_id#17,customer_id#18,amount#19] Batched: false, DataFilters: [isnotnull(customer_id#18)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/C:/Users/ANIL RATHOD/data-engineering-daily-log/day-15-join-benc..., PartitionFilters: [], PushedFilters: [IsNotNull(customer_id)], ReadSchema: struct<order_id:int,customer_id:int,amount:double>
+      +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=753]
+         +- Filter isnotnull(customer_id#37)
+            +- FileScan csv [customer_id#37,customer_name#38,region#39] Batched: false, DataFilters: [isnotnull(customer_id#37)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/C:/Users/ANIL RATHOD/data-engineering-daily-log/day-15-join-benc..., PartitionFilters: [], PushedFilters: [IsNotNull(customer_id)], ReadSchema: struct<customer_id:int,customer_name:string,region:string>
+
+
+  Broadcast join trial 1: 0.438s (result rows: 50000)
+  Broadcast join trial 2: 0.305s (result rows: 50000)
+  Broadcast join trial 3: 0.285s (result rows: 50000)
+  Broadcast join average: 0.343s
+
+=== Summary ===
+No-hint (sort-merge) average: 1.183s
+Broadcast average:            0.343s
+Broadcast was 3.45x faster
+SUCCESS: The process with PID 31220 (child process of PID 17796) has been terminated.
+SUCCESS: The process with PID 17796 (child process of PID 32728) has been terminated.
+SUCCESS: The process with PID 32728 (child process of PID 4020) has been terminated.
+^C
