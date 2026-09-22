@@ -1,0 +1,11 @@
+Listening on localhost:9999, waiting for Spark to connect...
+Connected by ('127.0.0.1', 60535)
+Sending: the quick brown fox jumps over the lazy dog
+Sending: the dog barks at the fox
+Sending: spark streaming reads words from a socket
+Sending: word count is the hello world of streaming
+Sending: the quick fox runs fast
+Sending: streaming data arrives continuously over time
+Sending: spark processes each micro batch as it arrives
+Sending: the lazy dog sleeps all day
+All lines sent. Closing connection.

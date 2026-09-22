@@ -1,0 +1,212 @@
+Missing Python executable 'python3', defaulting to 'C:\Users\ANIL RATHOD\anaconda3\Lib\site-packages\pyspark\bin\..' for SPARK_HOME environment variable. Please install Python or specify the correct Python executable in PYSPARK_DRIVER_PYTHON or PYSPARK_PYTHON environment variable to detect SPARK_HOME safely.
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/09/22 18:59:12 WARN TextSocketSourceProvider: The socket source should not be used for production applications! It does not support recovery.
+26/09/22 18:59:13 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: C:\Users\ANIL RATHOD\AppData\Local\Temp\temporary-a21856c2-dcb5-4e27-ac22-2228bc09526e. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+26/09/22 18:59:13 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+26/09/22 18:59:31 WARN TextSocketMicroBatchStream: Stream closed by localhost:9999
+26/09/22 18:59:39 WARN DAGScheduler: Failed to cancel job group 21114ea6-f9db-42a0-96e3-133f4ef9edf6. Cannot find active jobs for it.
+26/09/22 18:59:39 WARN DAGScheduler: Failed to cancel job group 21114ea6-f9db-42a0-96e3-133f4ef9edf6. Cannot find active jobs for it.
+--- Batch 0: no new words ---
+--- Batch 1: 9 new word(s) ---
+  the: 2
+  quick: 1
+  brown: 1
+  fox: 1
+  jumps: 1
+  over: 1
+  lazy: 1
+  dog: 1
+--- Batch 2: 6 new word(s) ---
+  the: 4
+  fox: 2
+  dog: 2
+  quick: 1
+  brown: 1
+  jumps: 1
+  over: 1
+  lazy: 1
+  barks: 1
+  at: 1
+--- Batch 3: 7 new word(s) ---
+  the: 4
+  fox: 2
+  dog: 2
+  quick: 1
+  brown: 1
+  jumps: 1
+  over: 1
+  lazy: 1
+  barks: 1
+  at: 1
+  spark: 1
+  streaming: 1
+  reads: 1
+  words: 1
+  from: 1
+  a: 1
+  socket: 1
+--- Batch 4: 8 new word(s) ---
+  the: 5
+  fox: 2
+  dog: 2
+  streaming: 2
+  quick: 1
+  brown: 1
+  jumps: 1
+  over: 1
+  lazy: 1
+  barks: 1
+  at: 1
+  spark: 1
+  reads: 1
+  words: 1
+  from: 1
+  a: 1
+  socket: 1
+  word: 1
+  count: 1
+  is: 1
+  hello: 1
+  world: 1
+  of: 1
+--- Batch 5: 5 new word(s) ---
+  the: 6
+  fox: 3
+  quick: 2
+  dog: 2
+  streaming: 2
+  brown: 1
+  jumps: 1
+  over: 1
+  lazy: 1
+  barks: 1
+  at: 1
+  spark: 1
+  reads: 1
+  words: 1
+  from: 1
+  a: 1
+  socket: 1
+  word: 1
+  count: 1
+  is: 1
+  hello: 1
+  world: 1
+  of: 1
+  runs: 1
+  fast: 1
+--- Batch 6: 6 new word(s) ---
+  the: 6
+  fox: 3
+  streaming: 3
+  quick: 2
+  over: 2
+  dog: 2
+  brown: 1
+  jumps: 1
+  lazy: 1
+  barks: 1
+  at: 1
+  spark: 1
+  reads: 1
+  words: 1
+  from: 1
+  a: 1
+  socket: 1
+  word: 1
+  count: 1
+  is: 1
+  hello: 1
+  world: 1
+  of: 1
+  runs: 1
+  fast: 1
+  data: 1
+  arrives: 1
+  continuously: 1
+  time: 1
+--- Batch 7: 8 new word(s) ---
+  the: 6
+  fox: 3
+  streaming: 3
+  quick: 2
+  over: 2
+  dog: 2
+  spark: 2
+  arrives: 2
+  brown: 1
+  jumps: 1
+  lazy: 1
+  barks: 1
+  at: 1
+  reads: 1
+  words: 1
+  from: 1
+  a: 1
+  socket: 1
+  word: 1
+  count: 1
+  is: 1
+  hello: 1
+  world: 1
+  of: 1
+  runs: 1
+  fast: 1
+  data: 1
+  continuously: 1
+  time: 1
+  processes: 1
+  each: 1
+  micro: 1
+  batch: 1
+  as: 1
+  it: 1
+--- Batch 8: 6 new word(s) ---
+  the: 7
+  fox: 3
+  dog: 3
+  streaming: 3
+  quick: 2
+  over: 2
+  lazy: 2
+  spark: 2
+  arrives: 2
+  brown: 1
+  jumps: 1
+  barks: 1
+  at: 1
+  reads: 1
+  words: 1
+  from: 1
+  a: 1
+  socket: 1
+  word: 1
+  count: 1
+  is: 1
+  hello: 1
+  world: 1
+  of: 1
+  runs: 1
+  fast: 1
+  data: 1
+  continuously: 1
+  time: 1
+  processes: 1
+  each: 1
+  micro: 1
+  batch: 1
+  as: 1
+  it: 1
+  sleeps: 1
+  all: 1
+  day: 1
+
+Streaming query stopped after timeout.
+Final word counts: {'the': 7, 'quick': 2, 'brown': 1, 'fox': 3, 'jumps': 1, 'over': 2, 'lazy': 2, 'dog': 3, 'barks': 1, 'at': 1, 'spark': 2, 'streaming': 3, 'reads': 1, 'words': 1, 'from': 1, 'a': 1, 'socket': 1, 'word': 1, 'count': 1, 'is': 1, 'hello': 1, 'world': 1, 'of': 1, 'runs': 1, 'fast': 1, 'data': 1, 'arrives': 2, 'continuously': 1, 'time': 1, 'processes': 1, 'each': 1, 'micro': 1, 'batch': 1, 'as': 1, 'it': 1, 'sleeps': 1, 'all': 1, 'day': 1}
+SUCCESS: The process with PID 12552 (child process of PID 24600) has been terminated.
+SUCCESS: The process with PID 24600 (child process of PID 18788) has been terminated.
+SUCCESS: The process with PID 18788 (child process of PID 31504) has been terminated.
+^C
