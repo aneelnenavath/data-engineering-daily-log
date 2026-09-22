@@ -1,0 +1,29 @@
+Missing Python executable 'python3', defaulting to 'C:\Users\ANIL RATHOD\anaconda3\Lib\site-packages\pyspark\bin\..' for SPARK_HOME environment variable. Please install Python or specify the correct Python executable in PYSPARK_DRIVER_PYTHON or PYSPARK_PYTHON environment variable to detect SPARK_HOME safely.
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[Stage 11:>                                                         (0 + 1) / 1]                                                                                Total rows: 3515
+Distinct order_date values: 30
+Written partitioned Parquet to sales_partitioned/
+
+=== Plan WITHOUT a partition filter (baseline) ===
+== Physical Plan ==
+*(1) ColumnarToRow
++- FileScan parquet [order_id#40,customer_id#41,amount#42,order_date#43] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/C:/Users/ANIL RATHOD/data-engineering-daily-log/day-18-partition..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<order_id:int,customer_id:int,amount:double>
+
+
+
+=== Plan WITH a partition filter (order_date = 2026-01-15) ===
+== Physical Plan ==
+*(1) ColumnarToRow
++- FileScan parquet [order_id#40,customer_id#41,amount#42,order_date#43] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/C:/Users/ANIL RATHOD/data-engineering-daily-log/day-18-partition..., PartitionFilters: [isnotnull(order_date#43), (order_date#43 = 2026-01-15)], PushedFilters: [], ReadSchema: struct<order_id:int,customer_id:int,amount:double>
+
+
+
+Rows for 2026-01-15: 120
+Same date counted directly from the CSV: 120
+SUCCESS: The process with PID 14840 (child process of PID 28288) has been terminated.
+SUCCESS: The process with PID 28288 (child process of PID 17340) has been terminated.
+SUCCESS: The process with PID 17340 (child process of PID 20784) has been terminated.
+^C
