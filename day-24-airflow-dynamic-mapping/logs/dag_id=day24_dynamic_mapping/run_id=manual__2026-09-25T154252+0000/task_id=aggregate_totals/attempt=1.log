@@ -1,0 +1,19 @@
+[2026-09-25T15:43:10.440+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-25T15:43:10.464+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: day24_dynamic_mapping.aggregate_totals manual__2026-09-25T15:42:52+00:00 [queued]>
+[2026-09-25T15:43:10.470+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: day24_dynamic_mapping.aggregate_totals manual__2026-09-25T15:42:52+00:00 [queued]>
+[2026-09-25T15:43:10.471+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-25T15:43:10.491+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): aggregate_totals> on 2026-09-25 15:42:52+00:00
+[2026-09-25T15:43:10.502+0000] {standard_task_runner.py:64} INFO - Started process 81 to run task
+[2026-09-25T15:43:10.501+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'day24_dynamic_mapping', 'aggregate_totals', 'manual__2026-09-25T15:42:52+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/day24_dynamic_mapping.py', '--cfg-path', '/tmp/tmp9w8ijt_5']
+[2026-09-25T15:43:10.505+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask aggregate_totals
+[2026-09-25T15:43:10.555+0000] {task_command.py:426} INFO - Running <TaskInstance: day24_dynamic_mapping.aggregate_totals manual__2026-09-25T15:42:52+00:00 [running]> on host 98ed33afc8b1
+[2026-09-25T15:43:10.624+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='day24_dynamic_mapping' AIRFLOW_CTX_TASK_ID='aggregate_totals' AIRFLOW_CTX_EXECUTION_DATE='2026-09-25T15:42:52+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-25T15:42:52+00:00'
+[2026-09-25T15:43:10.626+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-25T15:43:10.633+0000] {logging_mixin.py:188} INFO - Per-region results: [{'region': 'north', 'total': 100.0}, {'region': 'south', 'total': 40.0}, {'region': 'east', 'total': 40.0}]
+[2026-09-25T15:43:10.634+0000] {logging_mixin.py:188} INFO - Grand total: 180.0
+[2026-09-25T15:43:10.635+0000] {python.py:237} INFO - Done. Returned value was: 180.0
+[2026-09-25T15:43:10.636+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-25T15:43:10.788+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=day24_dynamic_mapping, task_id=aggregate_totals, run_id=manual__2026-09-25T15:42:52+00:00, execution_date=20260925T154252, start_date=20260925T154310, end_date=20260925T154310
+[2026-09-25T15:43:10.838+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-25T15:43:10.850+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-25T15:43:10.851+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

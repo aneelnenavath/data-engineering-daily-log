@@ -1,0 +1,1 @@
+region=east,total=40.0

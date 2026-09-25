@@ -1,0 +1,153 @@
+[2026-09-25T15:35:21.574+0000] {manager.py:470} INFO - Processing files using up to 1 processes at a time 
+[2026-09-25T15:35:21.585+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-09-25T15:35:21.588+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-09-25T15:35:21.590+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-09-25T15:35:21.604+0000] {manager.py:740} INFO - There are 0 files in /opt/airflow/dags
+[2026-09-25T15:40:21.655+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-09-25T15:40:21.805+0000] {manager.py:740} INFO - There are 1 files in /opt/airflow/dags
+[2026-09-25T15:40:23.993+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  1.48s           2026-09-25T15:40:23
+================================================================================
+[2026-09-25T15:40:54.265+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:40:54
+================================================================================
+[2026-09-25T15:41:24.545+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:41:24
+================================================================================
+[2026-09-25T15:41:54.811+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:41:54
+================================================================================
+[2026-09-25T15:42:19.109+0000] {manager.py:470} INFO - Processing files using up to 1 processes at a time 
+[2026-09-25T15:42:19.111+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-09-25T15:42:19.115+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-09-25T15:42:19.116+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-09-25T15:42:19.144+0000] {manager.py:740} INFO - There are 1 files in /opt/airflow/dags
+[2026-09-25T15:42:20.001+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.54s           2026-09-25T15:42:19
+================================================================================
+[2026-09-25T15:42:50.683+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.32s           2026-09-25T15:42:50
+================================================================================
+[2026-09-25T15:43:21.555+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:43:21
+================================================================================
+[2026-09-25T15:43:52.628+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:43:52
+================================================================================
+[2026-09-25T15:44:23.250+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.12s           2026-09-25T15:44:23
+================================================================================
+[2026-09-25T15:44:53.518+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:44:53
+================================================================================
+[2026-09-25T15:45:23.791+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:45:23
+================================================================================
+[2026-09-25T15:45:54.070+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:45:54
+================================================================================
+[2026-09-25T15:46:33.544+0000] {manager.py:470} INFO - Processing files using up to 1 processes at a time 
+[2026-09-25T15:46:33.553+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-09-25T15:46:33.554+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-09-25T15:46:33.556+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-09-25T15:46:33.604+0000] {manager.py:740} INFO - There are 1 files in /opt/airflow/dags
+[2026-09-25T15:46:35.238+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  1.35s           2026-09-25T15:46:35
+================================================================================
+[2026-09-25T15:47:07.328+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:47:07
+================================================================================
+[2026-09-25T15:47:37.651+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.12s           2026-09-25T15:47:37
+================================================================================
+[2026-09-25T15:48:08.018+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:48:08
+================================================================================
+[2026-09-25T15:48:38.300+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/day24_dynamic_mapping.py                           1           0  0.21s           2026-09-25T15:48:38
+================================================================================
