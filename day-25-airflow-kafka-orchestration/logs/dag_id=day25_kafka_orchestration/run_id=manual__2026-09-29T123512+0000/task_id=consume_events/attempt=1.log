@@ -1,0 +1,21 @@
+[2026-09-29T12:35:20.117+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-29T12:35:20.137+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: day25_kafka_orchestration.consume_events manual__2026-09-29T12:35:12+00:00 [queued]>
+[2026-09-29T12:35:20.143+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: day25_kafka_orchestration.consume_events manual__2026-09-29T12:35:12+00:00 [queued]>
+[2026-09-29T12:35:20.144+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-29T12:35:20.164+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): consume_events> on 2026-09-29 12:35:12+00:00
+[2026-09-29T12:35:20.171+0000] {standard_task_runner.py:64} INFO - Started process 274 to run task
+[2026-09-29T12:35:20.174+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'day25_kafka_orchestration', 'consume_events', 'manual__2026-09-29T12:35:12+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/day25_kafka_orchestration.py', '--cfg-path', '/tmp/tmpmkduy0_q']
+[2026-09-29T12:35:20.176+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask consume_events
+[2026-09-29T12:35:20.221+0000] {task_command.py:426} INFO - Running <TaskInstance: day25_kafka_orchestration.consume_events manual__2026-09-29T12:35:12+00:00 [running]> on host a0e855e67ff4
+[2026-09-29T12:35:20.288+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='day25_kafka_orchestration' AIRFLOW_CTX_TASK_ID='consume_events' AIRFLOW_CTX_EXECUTION_DATE='2026-09-29T12:35:12+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-29T12:35:12+00:00'
+[2026-09-29T12:35:20.290+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-29T12:35:20.300+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-29T12:35:20.302+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/dags/scripts/bounded_consume.py']
+[2026-09-29T12:35:20.314+0000] {subprocess.py:86} INFO - Output:
+[2026-09-29T12:35:39.084+0000] {subprocess.py:93} INFO - CONSUMED_COUNT=25
+[2026-09-29T12:35:39.139+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-29T12:35:39.141+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-29T12:35:39.167+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=day25_kafka_orchestration, task_id=consume_events, run_id=manual__2026-09-29T12:35:12+00:00, execution_date=20260929T123512, start_date=20260929T123520, end_date=20260929T123539
+[2026-09-29T12:35:39.233+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-09-29T12:35:39.245+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-29T12:35:39.257+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
