@@ -14,4 +14,3 @@ order_id,customer_id,amount,status
 12,113,8.75,pending
 13,114,37.20,completed
 14,115,21.10,cancelled
-16,101,50.00,unknown_status
