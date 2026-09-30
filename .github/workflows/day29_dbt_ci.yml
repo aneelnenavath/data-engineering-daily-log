@@ -1,0 +1,25 @@
+name: Day 29 - dbt CI
+
+on:
+  push:
+    paths:
+      - 'day-29-dbt-ci-github-actions/**'
+      - '.github/workflows/day29_dbt_ci.yml'
+  workflow_dispatch:
+
+jobs:
+  dbt-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt-duckdb
+        run: pip install dbt-duckdb
+
+      - name: Run dbt build
+        working-directory: day-29-dbt-ci-github-actions/dbt_project
+        run: dbt build --profiles-dir .
