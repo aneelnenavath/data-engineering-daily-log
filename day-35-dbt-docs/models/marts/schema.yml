@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: mart_customer_revenue
+    description: "Total completed-order revenue per customer, built from stg_orders."
+    columns:
+      - name: customer_id
+        description: "Customer this revenue total belongs to."
+        tests:
+          - unique
+          - not_null
+      - name: total_revenue
+        description: "Sum of amount across all completed orders for this customer. Must never be negative."
+        tests:
+          - not_null
+          - non_negative
