@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: mart_customer_revenue
+    description: "Total completed-order revenue per customer, built from stg_orders."
+    columns:
+      - name: customer_id
+        description: "Customer this revenue total belongs to."
+        tests:
+          - unique
+          - not_null
+      - name: total_revenue
+        description: "Sum of amount across all completed orders for this customer. Must never be negative."
+        tests:
+          - not_null
+          - non_negative
+
+  - name: mart_customer_revenue_ranked
+    description: "Customers ranked by total revenue, with a running cumulative total - built with window functions over mart_customer_revenue."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: revenue_rank
+        description: "Rank by total_revenue, descending. Ties share a rank and the next rank is skipped (standard RANK behavior)."
+        tests:
+          - not_null
+      - name: revenue_dense_rank
+        description: "Rank by total_revenue, descending. Ties share a rank but no rank is skipped (standard DENSE_RANK behavior)."
+        tests:
+          - not_null
+      - name: running_total_revenue
+        description: "Cumulative sum of total_revenue ordered from highest to lowest."
+        tests:
+          - not_null
