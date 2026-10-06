@@ -1,0 +1,16 @@
+unit_tests:
+  - name: test_mart_customer_revenue_only_sums_completed_orders
+    description: "Verifies mart_customer_revenue correctly includes only completed orders and excludes pending/cancelled ones, using fixed mocked input - not the real seed data."
+    model: mart_customer_revenue
+    given:
+      - input: ref('stg_orders')
+        rows:
+          - {order_id: 1, customer_id: 201, amount: 10.00, status: 'completed'}
+          - {order_id: 2, customer_id: 201, amount: 20.00, status: 'completed'}
+          - {order_id: 3, customer_id: 201, amount: 999.00, status: 'pending'}
+          - {order_id: 4, customer_id: 202, amount: 50.00, status: 'completed'}
+          - {order_id: 5, customer_id: 202, amount: 999.00, status: 'cancelled'}
+    expect:
+      rows:
+        - {customer_id: 201, num_orders: 2, total_revenue: 30.00}
+        - {customer_id: 202, num_orders: 1, total_revenue: 50.00}
