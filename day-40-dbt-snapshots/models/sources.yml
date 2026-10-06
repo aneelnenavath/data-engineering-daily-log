@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw shipment tracking data, loaded by an upstream system. Monitored for freshness."
+    schema: "{{ target.schema }}"
+    tables:
+      - name: raw_shipments
+        description: "One row per shipment, as received from the upstream shipment tracking feed."
+        loaded_at_field: loaded_at
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 3, period: day}
