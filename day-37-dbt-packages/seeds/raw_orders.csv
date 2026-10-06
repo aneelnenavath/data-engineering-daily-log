@@ -1,0 +1,17 @@
+order_id,customer_id,amount,status
+1,101,25.50,completed
+2,102,40.00,completed
+3,103,18.25,pending
+4,104,33.75,completed
+5,105,12.00,cancelled
+6,106,60.00,completed
+7,107,15.50,pending
+8,108,22.00,completed
+9,109,45.00,completed
+10,110,29.99,pending
+11,111,19.99,completed
+15,112,50.00,completed
+12,113,8.75,pending
+13,114,37.20,completed
+14,115,21.10,cancelled
+17,116,50.00,completed

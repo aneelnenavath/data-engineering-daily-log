@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_shipments
+    description: "Cleaned staging view over the raw_shipments source, monitored for freshness."
+    columns:
+      - name: shipment_id
+        description: "Primary key for a single shipment."
+        tests:
+          - unique
+          - not_null
+      - name: status
+        description: "Current shipment status."
+        tests:
+          - accepted_values:
+              values: ['delivered', 'in_transit']
