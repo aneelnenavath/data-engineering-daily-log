@@ -1,0 +1,6 @@
+customer_id,name,tier,updated_at
+1,Alice Johnson,gold,2026-10-06 12:00:00
+2,Ben Carter,gold,2026-09-15 10:00:00
+3,Chidi Okafor,gold,2026-09-01 09:00:00
+4,Diya Sharma,bronze,2026-09-01 09:00:00
+5,Ewan MacGregor,silver,2026-09-01 09:00:00

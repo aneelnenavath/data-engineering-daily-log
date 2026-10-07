@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: "Cleaned staging view over the raw clickstream/events seed, loaded incrementally by event_id."
+    columns:
+      - name: event_id
+        description: "Primary key for a single tracked event."
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Customer the event is attributed to."
+        tests:
+          - not_null
+      - name: event_type
+        description: "Type of event recorded - a purchase or a refund."
+        tests:
+          - accepted_values:
+              values: ['purchase', 'refund']
