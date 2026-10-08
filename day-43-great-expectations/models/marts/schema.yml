@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: mart_customer_revenue
+    description: "Total completed-order revenue per customer, built from stg_orders."
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: customer_id
+        description: "Customer this revenue total belongs to."
+        data_type: integer
+        tests:
+          - unique
+          - not_null
+      - name: num_orders
+        description: "Number of completed orders for this customer."
+        data_type: bigint
+        tests:
+          - not_null
+      - name: total_revenue
+        description: "Sum of amount across all completed orders for this customer. Must never be negative."
+        data_type: double
+        tests:
+          - not_null
+          - non_negative
+
+  - name: mart_customer_revenue_ranked
+    description: "Customers ranked by total revenue, with a running cumulative total - built with window functions over mart_customer_revenue."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: revenue_rank
+        description: "Rank by total_revenue, descending. Ties share a rank and the next rank is skipped (standard RANK behavior)."
+        tests:
+          - not_null
+      - name: revenue_dense_rank
+        description: "Rank by total_revenue, descending. Ties share a rank but no rank is skipped (standard DENSE_RANK behavior)."
+        tests:
+          - not_null
+      - name: running_total_revenue
+        description: "Cumulative sum of total_revenue ordered from highest to lowest."
+        tests:
+          - not_null
+
+  - name: fct_orders_incremental
+    description: "Orders fact table loaded incrementally - only orders with an order_id higher than the current max in the table are added on each run after the first, instead of reprocessing every order every time."
+    columns:
+      - name: order_id
+        description: "Primary key and the incremental cursor - new runs only pick up rows with a higher order_id than what's already in the table."
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Customer who placed the order."
+        tests:
+          - not_null
+      - name: amount
+        description: "Order amount."
+        tests:
+          - not_null
+      - name: status
+        description: "Order status (completed, pending, cancelled)."
+        tests:
+          - not_null

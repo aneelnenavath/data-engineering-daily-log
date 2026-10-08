@@ -1,0 +1,19 @@
+version: 2
+
+snapshots:
+  - name: customers_snapshot
+    description: "SCD Type 2 history of raw_customers - tracks changes to a customer's tier over time using the timestamp strategy keyed on updated_at. Each customer has one row per distinct version; the current version has an empty dbt_valid_to."
+    columns:
+      - name: dbt_scd_id
+        description: "Unique identifier for one specific version of a customer row."
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Business key - repeats across multiple rows whenever a customer has more than one historical version."
+        tests:
+          - not_null
+      - name: dbt_valid_from
+        description: "Timestamp this version became current."
+        tests:
+          - not_null
