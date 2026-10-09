@@ -1,0 +1,6 @@
+shipment_id,destination,status,loaded_at
+1,London,delivered,2026-10-01 09:15:00
+2,Manchester,in_transit,2026-10-01 09:20:00
+3,Leeds,delivered,2026-10-01 09:10:00
+4,Bristol,in_transit,2026-10-01 09:25:00
+5,Glasgow,delivered,2026-10-01 09:05:00

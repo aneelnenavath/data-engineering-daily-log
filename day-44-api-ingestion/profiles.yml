@@ -1,0 +1,16 @@
+day26_orders:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'dev.duckdb'
+      threads: 1
+    postgres:
+      type: postgres
+      host: localhost
+      port: 5433
+      user: dbt_user
+      password: dbt_pass
+      dbname: daylog
+      schema: public
+      threads: 1

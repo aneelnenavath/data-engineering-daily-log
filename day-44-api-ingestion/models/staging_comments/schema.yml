@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_comments
+    description: "Comments pulled from the JSONPlaceholder API via a paginated fetch script (fetch_comments.py), proven complete against an independent unpaginated count before being seeded into dbt."
+    columns:
+      - name: id
+        description: "Comment id from the source API."
+        tests:
+          - unique
+          - not_null
+      - name: post_id
+        description: "The post this comment belongs to."
+        tests:
+          - not_null
+      - name: email
+        description: "Commenter's email address."
+        tests:
+          - not_null

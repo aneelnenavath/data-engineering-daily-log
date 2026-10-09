@@ -1,0 +1,22 @@
+name: 'day26_orders'
+version: '1.0.0'
+config-version: 2
+
+profile: 'day26_orders'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+on-run-start:
+  - "create table if not exists main.dbt_run_log (invocation_id varchar, run_started_at timestamp, total_nodes integer, pass_count integer, fail_count integer, skip_count integer)"
+  - "create table if not exists main.model_build_log (model_name varchar, built_at timestamp, row_count integer)"
+
+on-run-end:
+  - "{{ log_run_summary(results) }}"
+
+models:
+  day26_orders:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
