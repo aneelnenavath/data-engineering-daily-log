@@ -1,0 +1,5 @@
+[
+  {"order_id": 4, "customer_id": 104, "status": "completed", "amount": 60.00, "order_date": "2026-10-02", "discount_code": "SAVE10"},
+  {"order_id": 5, "customer_id": 105, "status": "pending", "amount": 33.25, "order_date": "2026-10-02", "discount_code": null},
+  {"order_id": 6, "customer_id": 106, "status": "completed", "amount": 88.10, "order_date": "2026-10-02", "discount_code": "WELCOME5"}
+]
