@@ -1,0 +1,4 @@
+order_id,customer_id,status,amount
+6,106,completed,150.00
+7,107,pending,22.40
+8,108,completed,310.75
